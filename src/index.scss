@@ -1,0 +1,85 @@
+@import "./fonts.scss";
+@import './reset.scss';
+
+:root {
+  --blue: #0084b4;
+  --gray: #657786;
+  --black: #14171a;
+  --white: #ffffff;
+}
+
+body {
+  font-family: Roboto;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+
+  &--normal {
+    max-width: 1275px;
+  }
+}
+
+.header__container {
+  display: flex;
+
+  padding: 5px 0px;
+
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__logo {
+  display: flex;
+}
+
+.logo__name {
+  margin-left: 10px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 19px;
+  color: var(--blue);
+}
+
+.auth__button {
+  font-size: 14px;
+  line-height: 19px;
+  font-weight: 700;
+  border: none;
+  border-radius: 100px;
+  padding: 10px 30px;
+
+  &--login {
+    background: var(--white);
+    color: var(--blue);
+  }
+
+  &--signup {
+    margin-left: 25px;
+
+    background: var(--blue);
+    color: var(--white);
+  }
+}
+
+.cover {
+  position: relative;
+
+}
+
+.cover__image {
+  width: 100%;
+  object-fit: cover;
+}
+
+.profile__container {
+  position: absolute;
+    left: 50;
+    bottom: -165px;
+    left: 20%;
+}
+
+.profile__avatar {
+  border-radius: 100px;
+}
