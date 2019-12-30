@@ -1,56 +1,22 @@
 import React from "react";
-import logo from "./img/header/logo.svg";
-import cover from "./img/cover/cover.jpg";
 import avatar from "./img/profile/avatar.jpg";
 import like from "./img/tweet/like.svg";
-import sticker from "./img/join-us/sticker.png";
 import avatar1 from "./img/tweet-modal/avatar1.jpg";
 import avatar2 from "./img/tweet-modal/avatar2.jpg";
 import avatar3 from "./img/tweet-modal/avatar3.jpg";
+import Header from "./components/Header";
+import Cover from "./components/Cover";
+import Main from "./components/Main";
 
 const App = () => {
   return (
     <div className="App">
-      <header className="header">
-        <div className="container container--normal header__container">
-          <div className="header__logo logo">
-            <img src={logo} alt="Logo" className="logo__icon" />
-            <p className="logo__name logo__name--hidden">Guccitter</p>
-          </div>
-          <div className="header__auth auth">
-            <button type="button" className="auth__button auth__button--login">
-              Login
-            </button>
-            <button type="button" className="auth__button auth__button--signup">
-              Sign Up
-            </button>
-          </div>
-        </div>
-      </header>
-      <section className="cover">
-        <div className="container cover__container">
-          <img src={cover} alt="" className="cover__image" />
-        </div>
-      </section>
-      <main className="main">
+      <Header />
+      <Cover />
+      <Main />
+      {/* <main className="main">
         <div className="container container--normal main__container">
-          <div className="profile">
-            <img src={avatar} alt="" className="profile__avatar" />
-            <ul className="profile__list">
-              <li className="profile__item profile__item--name">
-                Dmitry Novikov
-              </li>
-              <li className="profile__item profile__item--nick">@skromez</li>
-            </ul>
-            <ul className="profile__list">
-              <li className="profile__item profile__item--registration">
-                Joined September 2013
-              </li>
-              <li className="profile__item profile__item--location">
-                Sochi, Russia
-              </li>
-            </ul>
-          </div>
+          <Profile />
           <div className="feed">
             <div className="tweets">
               <input
@@ -154,7 +120,8 @@ const App = () => {
             </button>
           </div>
         </div>
-      </main>
+      </main> */}
+
       <section className="tweet-modal tweet-modal--hidden">
         <div className="tweet-modal__container">
           <div className="tweet-modal__wrapper">
