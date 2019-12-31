@@ -9,4 +9,10 @@ export const HeaderBody = styled.header`
 export const HeaderContainer = styled(Container)`
   display: flex;
   justify-content: space-between;
+
+  .header__button {
+    &--signup {
+      margin-left: 25px;
+    }
+  }
 `;

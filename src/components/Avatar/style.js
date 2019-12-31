@@ -13,14 +13,12 @@ const big = css`
   @media (max-width: 400px) {
     width: 85px;
     height: 85px;
-    margin-right: 10px;
   }
 `;
 
 const normal = css`
   width: 48px;
   height: 48px;
-  margin-right: 20px;
 `;
 
 const small = css`
@@ -29,8 +27,6 @@ const small = css`
 `;
 
 const AvatarBody = styled.div`
-  margin-bottom: 20px;
-
   img {
     border-radius: 100px;
 

@@ -26,6 +26,14 @@ const ProfileBody = styled.section`
     width: 100%;
     align-items: flex-end;
   }
+
+  .profile__avatar {
+    margin-bottom: 20px;
+  }
+
+  .profile__user {
+    margin-bottom: 30px;
+  }
 `;
 
 export default ProfileBody;

@@ -14,6 +14,22 @@ const TweetBody = styled.div`
     line-height: 20px;
     color: var(--black);
   }
+
+  .tweet__container {
+    display: flex;
+  }
+
+  .tweet__avatar {
+    margin-right: 20px;
+  }
+
+  .tweet__user {
+    margin-right: 5px;
+  }
+
+  .tweet__data {
+    margin-left: 15px;
+  }
 `;
 
 export default TweetBody;

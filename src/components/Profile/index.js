@@ -3,11 +3,18 @@ import ProfileBody from "./style";
 import Avatar from "../Avatar";
 import User from "../User";
 import UserInfo from "../UserInfo";
+import UserAvatar from "../../img/profile/avatar.jpg";
+
 
 const Profile = () => (
   <ProfileBody>
-    <Avatar size="big" />
-    <User direction="columnBig" name="Dmitry Novikov" nick="skromez" />
+    <Avatar avatar={UserAvatar} className="profile__avatar" size="big" />
+    <User
+      className="profile__user"
+      direction="columnBig"
+      name="Dmitry Novikov"
+      nick="skromez"
+    />
     <UserInfo text="Joined September 2013" icon="calendar" />
     <UserInfo text="Sochi, Russia" icon="arrow" />
   </ProfileBody>

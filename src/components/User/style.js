@@ -2,6 +2,7 @@ import styled, { css } from "styled-components";
 
 const columnBig = css`
   flex-direction: column;
+
   .user__name {
     font-size: 25px;
     font-weight: 700;
@@ -16,6 +17,7 @@ const columnBig = css`
 
 const column = css`
   flex-direction: column;
+
   .user__name {
     font-size: 18px;
     font-weight: 700;
@@ -25,7 +27,6 @@ const column = css`
 
 const row = css`
   flex-direction: row;
-  margin-bottom: 0;
 
   .user__name {
     font-size: 14px;
@@ -38,8 +39,6 @@ const row = css`
 `;
 
 const UserBody = styled.div`
-  margin-right: 10px;
-  margin-bottom: 30px;
   display: flex;
 
   ${props => {
