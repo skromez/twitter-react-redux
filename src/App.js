@@ -1,10 +1,38 @@
-import React from 'react';
-import UserPage from './pages/UserPage/UserPage';
+import React, { Component } from 'react';
+import User from './pages/User';
 
-const App = () => {
-  return (
-    <UserPage />
-  );
+class App extends Component {
+  state = {
+    shownLogin: false,
+    shownSignup: false,
+  };
+
+  onToggleSignup = () => {
+    this.setState(({ shownSignup }) => {
+      return {
+        shownSignup: !shownSignup
+      };
+    });
+  };
+
+  onToggleLogin = () => {
+    this.setState(({ shownLogin }) => {
+      return {
+        shownLogin: !shownLogin
+      };
+    });
+  };
+
+  render() {
+    const state = this.state;
+    return (
+      <User
+        onToggleLogin={this.onToggleLogin}
+        onToggleSignup={this.onToggleSignup}
+        state={state}
+      />
+    );
+  }
 };
 
 export default App;

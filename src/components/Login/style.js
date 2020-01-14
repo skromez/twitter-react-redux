@@ -1,19 +1,20 @@
 import styled from 'styled-components';
 
 const LoginBody = styled.section`
-  margin-top: 10px;
+  position: fixed;
   width: 100%;
   height: 100%;
-
-  @media (max-width: 1300px) {
-    display: none;
-  }
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.5);
 
   .login__container {
-    padding: 15px;
+    position: fixed;
+    padding: 20px;
     max-width: 260px;
-    margin: 0 auto;
-
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    border-radius: 8px;
     background: var(--white);
   }
 
@@ -31,6 +32,21 @@ const LoginBody = styled.section`
 
   .login__button {
     padding: 6.5px 30px;
+    
+    &--icon {
+      position: absolute;
+      border: none;
+      background: transparent;
+  
+      padding: 5px;
+      margin: 0;
+  
+      font-size: 28px;
+      color: var(--white);
+      
+      top: 0;
+      right: -45px;
+    }
   }
 
   .login__input {

@@ -3,7 +3,7 @@ import sticker from '../../assets/images/join-us/sticker.png';
 import JoinBody from './style';
 import Button from '../Button';
 
-const Join = () => (
+const Join = ({ onToggleSignup }) => (
   <JoinBody>
     <img src={sticker} alt="Sticker" />
     <h2 className="join__heading">
@@ -16,7 +16,13 @@ const Join = () => (
       <br />
       button!
     </p>
-    <Button type="button" className="join__button" filled="true" size="105px">
+    <Button
+      onClick={onToggleSignup}
+      type="button"
+      className="join__button"
+      filled="true"
+      size="105px"
+    >
       Sign Up
     </Button>
   </JoinBody>

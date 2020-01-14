@@ -5,7 +5,7 @@ import Tweets from '../Tweets';
 import Tweet from '../Tweet';
 import Join from '../Join';
 
-const Main = () => (
+const Main = ({ onToggleSignup }) => (
   <MainBody>
     <MainContainer size="normal" padding="normal">
       <Profile />
@@ -17,7 +17,7 @@ const Main = () => (
           <Tweet />
         </div>
       </div>
-      <Join />
+      <Join onToggleSignup={onToggleSignup} />
     </MainContainer>
   </MainBody>
 );

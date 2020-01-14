@@ -1,14 +1,24 @@
 import styled from 'styled-components';
 
 const ModalBody = styled.section`
-  background-color: var(--white);
-  max-width: 605px;
-  padding: 30px 40px;
-  margin: 0 auto;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  top: 0;
   border-radius: 8px;
-
-  @media (max-width: 1300px) {
-    display: none;
+  
+  .modal {
+    position: fixed;
+    min-width: 605px;
+    padding: 30px 40px;
+    border-radius: 8px;
+   
+    background-color: var(--white);
+    
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);    
   }
 
   .modal__container {
@@ -67,6 +77,9 @@ const ModalBody = styled.section`
       font-weight: 400;
       color: var(--gray);
     }
+  }
+  .data__icon {
+    display: none;
   }
 `;
 
