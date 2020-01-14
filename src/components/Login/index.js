@@ -1,9 +1,9 @@
-import React from "react";
-import Input from "../Input";
-import Button from "../Button";
-import LoginBody from "./style";
+import React, { Component } from 'react';
+import Input from '../Input';
+import Button from '../Button';
+import LoginBody from './style';
 
-const Login = () => (
+const LoginContent = () => (
   <LoginBody className="login">
     <div className="login__container">
       <h2 className="login__header">Already signed up?</h2>
@@ -27,5 +27,21 @@ const Login = () => (
     </div>
   </LoginBody>
 );
+
+class Login extends Component {
+  state = {
+    shown: false
+  };
+  render() {
+    const { shown } = this.state;
+    const content = shown ? <LoginContent /> : null;
+
+    return (
+      <>
+        {content}
+      </>
+    )
+  }
+}
 
 export default Login;

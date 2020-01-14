@@ -1,9 +1,9 @@
-import React from "react";
-import ProfileBody from "./style";
-import Avatar from "../Avatar";
-import User from "../User";
-import UserInfo from "../UserInfo";
-import UserAvatar from "../../img/profile/avatar.jpg";
+import React from 'react';
+import ProfileBody from './style';
+import Avatar from '../Avatar';
+import User from '../User';
+import UserInfo from '../UserInfo';
+import UserAvatar from '../../assets/images/profile/avatar.jpg';
 
 
 const Profile = () => (

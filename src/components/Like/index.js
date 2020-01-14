@@ -1,6 +1,6 @@
-import React from "react";
-import LikeBody from "./style";
-import { ReactComponent as Icon } from "../../img/tweet/like.svg";
+import React from 'react';
+import LikeBody from './style';
+import { ReactComponent as Icon } from '../../assets/images/tweet/like.svg';
 
 const Like = ({ amount, fill, stroke }) => (
   <LikeBody>

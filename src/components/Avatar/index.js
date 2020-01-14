@@ -1,5 +1,5 @@
-import React from "react";
-import AvatarBody from "./style";
+import React from 'react';
+import AvatarBody from './style';
 
 const Avatar = ({ size, className, avatar }) => (
   <AvatarBody className={className} size={size}>

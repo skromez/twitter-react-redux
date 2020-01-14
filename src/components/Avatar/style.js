@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components";
+import styled, { css } from 'styled-components';
 
 const big = css`
   width: 210px;
@@ -30,18 +30,18 @@ const AvatarBody = styled.div`
   img {
     border-radius: 100px;
 
-    ${props => {
-      switch (props.size) {
-        case "big":
-          return big;
-        case "normal":
-          return normal;
-        case "small":
-          return small;
-        default:
-          return "";
-      }
-    }}
+    ${(props) => {
+    switch (props.size) {
+      case 'big':
+        return big;
+      case 'normal':
+        return normal;
+      case 'small':
+        return small;
+      default:
+        return '';
+    }
+  }}
   }
 `;
 

@@ -1,15 +1,11 @@
-import React from "react";
-import UserInfoBody from "./style";
-import calendar from "../../img/profile/calendar.svg";
-import arrow from "../../img/profile/arrow.svg";
+import React from 'react';
+import UserInfoBody from './style';
+import { ReactComponent as Calendar } from '../../assets/images/profile/calendar.svg';
+import { ReactComponent as Arrow } from '../../assets/images/profile/arrow.svg';
 
 const UserInfo = ({ text, icon }) => (
   <UserInfoBody>
-    <img
-      src={icon === "calendar" ? calendar : arrow}
-      alt=""
-      className="userInfo__icon"
-    />
+    {icon === 'calendar' ? <Calendar className="userInfo__icon" /> : <Arrow className="userInfo__icon" />}
     <p className="userInfo__text">{text}</p>
   </UserInfoBody>
 );

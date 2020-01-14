@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components";
+import styled, { css } from 'styled-components';
 
 const unfilled = css`
   background: var(--white);
@@ -28,23 +28,23 @@ const Button = styled.button`
   border: none;
   border-radius: 100px;
   padding: 10px 30px;
-  min-width: ${props => {
+  min-width: ${(props) => {
     switch (props.size) {
       case props.size:
         return `${props.size}`;
       default:
-        return "";
+        return '';
     }
   }};
 
-  ${props => {
+  ${(props) => {
     switch (props.filled) {
-      case "false":
+      case 'false':
         return unfilled;
-      case "true":
+      case 'true':
         return filled;
       default:
-        return "";
+        return '';
     }
   }};
 `;

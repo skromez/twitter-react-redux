@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 const SignUpBody = styled.section`
   margin-top: 10px;

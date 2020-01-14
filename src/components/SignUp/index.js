@@ -1,9 +1,9 @@
-import React from "react";
-import Input from "../Input";
-import Button from "../Button";
-import SignUpBody from "./style";
+import React, { Component } from 'react';
+import Input from '../Input';
+import Button from '../Button';
+import SignUpBody from './style';
 
-const SignUp = () => (
+const SignUpContent = () => (
   <SignUpBody>
     <div className="signup__container">
       <h1 className="signup__heading">Sign Up</h1>
@@ -24,5 +24,21 @@ const SignUp = () => (
     </div>
   </SignUpBody>
 );
+
+class SignUp extends Component {
+  state = {
+    shown: false
+  };
+
+  render() {
+    const { shown } = this.state;
+    const content = shown ?  <SignUpContent /> : null;
+    return (
+      <>
+        {content}
+      </>
+    )
+  }
+}
 
 export default SignUp;

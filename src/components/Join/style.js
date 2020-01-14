@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 const JoinBody = styled.div`
   min-width: 250px;
@@ -37,4 +37,3 @@ const JoinBody = styled.div`
 `;
 
 export default JoinBody;
-

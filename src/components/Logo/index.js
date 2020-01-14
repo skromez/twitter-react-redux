@@ -1,6 +1,6 @@
-import React from "react";
-import logo from "../../img/header/logo.svg";
-import LogoBody from "./style";
+import React from 'react';
+import logo from '../../assets/images/header/logo.svg';
+import LogoBody from './style';
 
 const Logo = () => (
   <LogoBody className="logo">

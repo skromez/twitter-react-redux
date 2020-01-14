@@ -1,9 +1,9 @@
-import React from "react";
-import { MainBody, MainContainer } from "./style";
-import Profile from "../Profile";
-import Tweets from "../Tweets";
-import Tweet from "../Tweet";
-import Join from "../Join";
+import React from 'react';
+import { MainBody, MainContainer } from './style';
+import Profile from '../Profile';
+import Tweets from '../Tweets';
+import Tweet from '../Tweet';
+import Join from '../Join';
 
 const Main = () => (
   <MainBody>

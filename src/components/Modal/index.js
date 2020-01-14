@@ -1,23 +1,23 @@
-import React from "react";
-import Avatar from "../Avatar";
-import User from "../User";
-import ModalBody from "./style";
-import Data from "../Data";
-import avatar1 from "../../img/tweet-modal/avatar1.jpg";
-import avatar2 from "../../img/tweet-modal/avatar2.jpg";
-import avatar3 from "../../img/tweet-modal/avatar3.jpg";
-import UserAvatar from "../../img/profile/avatar.jpg";
-import Like from "../Like";
+import React, { Component } from 'react';
+import Avatar from '../Avatar';
+import User from '../User';
+import ModalBody from './style';
+import Data from '../Data';
+import avatar1 from '../../assets/images/tweet-modal/avatar1.jpg';
+import avatar2 from '../../assets/images/tweet-modal/avatar2.jpg';
+import avatar3 from '../../assets/images/tweet-modal/avatar3.jpg';
+import UserAvatar from '../../assets/images/profile/avatar.jpg';
+import Like from '../Like';
 
-const Modal = ({ name, nick }) => (
+const ModalContent = () => (
   <ModalBody>
     <div className="modal__container">
       <Avatar avatar={UserAvatar} className="modal__avatar" size="normal" />
       <User
         className="modal__user"
         direction="column"
-        name={name}
-        nick={nick}
+        name="Dmitry Novikov"
+        nick="skromez"
       />
     </div>
     <p className="modal__text">
@@ -38,5 +38,23 @@ const Modal = ({ name, nick }) => (
     <Like amount="15" fill="none" stroke="#657786" />
   </ModalBody>
 );
+
+class Modal extends  Component {
+  state = {
+    shown: false
+  };
+
+  render() {
+    const { shown } = this.state;
+    const content = shown ? <ModalContent /> : null;
+
+    return (
+      <>
+        {content}
+      </>
+    )
+
+  }
+}
 
 export default Modal;

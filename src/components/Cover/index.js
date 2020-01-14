@@ -1,7 +1,7 @@
-import React from "react";
-import Container from "../Container";
-import CoverBody from "./style";
-import cover from "../../img/cover/cover.jpg";
+import React from 'react';
+import Container from '../Container';
+import CoverBody from './style';
+import cover from '../../assets/images/cover/cover.jpg';
 
 const Cover = () => (
   <CoverBody>

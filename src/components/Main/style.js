@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import Container from "../Container/style";
+import styled from 'styled-components';
+import Container from '../Container/style';
 
 export const MainBody = styled.main`
   margin-top: 2px;

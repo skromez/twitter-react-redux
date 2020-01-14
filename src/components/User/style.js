@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components";
+import styled, { css } from 'styled-components';
 
 const columnBig = css`
   flex-direction: column;
@@ -41,16 +41,16 @@ const row = css`
 const UserBody = styled.div`
   display: flex;
 
-  ${props => {
+  ${(props) => {
     switch (props.direction) {
-      case "columnBig":
+      case 'columnBig':
         return columnBig;
-      case "column":
+      case 'column':
         return column;
-      case "row":
+      case 'row':
         return row;
       default:
-        return "";
+        return '';
     }
   }}
 

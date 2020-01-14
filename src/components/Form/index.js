@@ -1,9 +1,9 @@
-import React from "react";
-import Input from "../Input";
-import Button from "../Button";
-import FormBody from "./style";
+import React from 'react';
+import Input from '../Input';
+import Button from '../Button';
+import FormBody from './style';
 
-const Form = ({ header, checkbox }) => (
+const Form = ({ header }) => (
   <FormBody>
     <div className="form__container">
       <p className="form__heading"> {header} </p>

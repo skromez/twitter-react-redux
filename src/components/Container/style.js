@@ -1,23 +1,23 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 const ContainerBody = styled.div`
-  max-width: ${props => {
+  max-width: ${(props) => {
     switch (props.size) {
-      case "normal":
-        return "1335px";
-      case "narrow":
-        return "670px";
+      case 'normal':
+        return '1335px';
+      case 'narrow':
+        return '670px';
       default:
-        return "100%";
+        return '100%';
     }
   }};
 
-  padding: ${props => {
+  padding: ${(props) => {
     switch (props.padding) {
-      case "normal":
-        return "5px 30px";
+      case 'normal':
+        return '5px 30px';
       default:
-        return "0";
+        return '0';
     }
   }};
 

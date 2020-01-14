@@ -1,7 +1,7 @@
-import React from "react";
-import { HeaderBody, HeaderContainer } from "./style";
-import Logo from "../Logo";
-import Button from "../Button";
+import React from 'react';
+import { HeaderBody, HeaderContainer } from './style';
+import Logo from '../Logo';
+import Button from '../Button';
 
 const Header = () => (
   <HeaderBody className="header">

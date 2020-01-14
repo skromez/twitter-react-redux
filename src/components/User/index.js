@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React from "react";
-import UserBody from "./style";
+import React from 'react';
+import UserBody from './style';
 
 const User = ({ name, nick, direction, className }) => (
   <UserBody className={className} direction={direction}>

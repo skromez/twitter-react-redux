@@ -1,5 +1,5 @@
-import React from "react";
-import TweetsBody from "./style";
+import React from 'react';
+import TweetsBody from './style';
 
 const Tweets = () => (
   <TweetsBody>

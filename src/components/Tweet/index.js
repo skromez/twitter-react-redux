@@ -1,10 +1,10 @@
-import React from "react";
-import Avatar from "../Avatar";
-import User from "../User";
-import TweetBody from "./style";
-import Data from "../Data";
-import Like from "../Like";
-import UserAvatar from "../../img/profile/avatar.jpg";
+import React from 'react';
+import Avatar from '../Avatar';
+import User from '../User';
+import TweetBody from './style';
+import Data from '../Data';
+import Like from '../Like';
+import UserAvatar from '../../assets/images/profile/avatar.jpg';
 
 
 const Tweet = () => (

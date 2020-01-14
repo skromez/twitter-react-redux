@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 const LikeBody = styled.button`
   margin-top: 15px;

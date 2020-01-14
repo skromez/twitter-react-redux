@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 const CoverBody = styled.section`
   padding-bottom: 60px;

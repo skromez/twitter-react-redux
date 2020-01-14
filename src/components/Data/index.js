@@ -1,6 +1,6 @@
 import React from 'react';
 import DataBody from './style';
-import { ReactComponent as Dot } from '../../img/tweet/dot.svg';
+import { ReactComponent as Dot } from '../../assets/images/tweet/dot.svg';
 
 const Data = ({ data, className }) => (
   <DataBody className={className}>
