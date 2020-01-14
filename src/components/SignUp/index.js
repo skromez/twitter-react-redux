@@ -10,38 +10,31 @@ class SignUpContent extends Component {
     nickname: null,
     location: null,
   };
+
   handleFirstNameChange = (e) => {
-    e.persist();
-    this.setState(() => {
-      return {
-        firstName: e.target.value
-      }
+    this.setState({
+      firstName: e.target.value
     })
   };
+
   handleLastNameChange = (e) => {
-    e.persist();
-    this.setState(() => {
-      return {
-        lastName: e.target.value
-      }
+    this.setState({
+      lastName: e.target.value
     })
   };
+
   handleNicknameChange = (e) => {
-    e.persist();
-    this.setState(() => {
-      return {
-        nickname: e.target.value
-      }
+    this.setState({
+      nickname: e.target.value
     })
   };
+
   handleLocationChange = (e) => {
-    e.persist();
-    this.setState(() => {
-      return {
-        location: e.target.value
-      }
+    this.setState({
+      location: e.target.value
     })
   };
+  
   handleSubmit = (e) => {
     e.preventDefault();
     console.log(this.state)

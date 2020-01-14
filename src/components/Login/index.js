@@ -10,20 +10,14 @@ class LoginContent extends Component {
   };
 
   handleLoginChange = (e) => {
-    e.persist();
-    this.setState(() => {
-      return {
-        login: e.target.value
-      }
+    this.setState({
+      login: e.target.value
     })
   };
 
   handlePasswordChange = (e) => {
-    e.persist();
-    this.setState(() => {
-      return {
-        password: e.target.value
-      }
+    this.setState({
+      password: e.target.value
     })
   };
 
@@ -46,6 +40,10 @@ class LoginContent extends Component {
           </button>
           <h2 className="login__header">Already signed up?</h2>
           <form onSubmit={this.handleSubmit} className="login__form form-login">
+            {/*<input value={password}*/}
+            {/*       type="text"*/}
+            {/*       onChange={this.handlePasswordChange}*/}
+            {/*/>*/}
             <Input
               type="text"
               className="login__input"
