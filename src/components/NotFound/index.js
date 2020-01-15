@@ -1,7 +1,7 @@
 import React from 'react';
 import NotFoundBody from './styles';
 
-const NotFound = ({ id }) => {
+const NotFound = () => {
   return (
     <NotFoundBody>
       <div className="not-found">

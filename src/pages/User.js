@@ -1,23 +1,20 @@
 import React from 'react';
+import { useParams } from 'react-router-dom';
 import Header from '../components/Header';
 import Cover from '../components/Cover';
 import Main from '../components/Main';
 
 const User = (
   {
-    onToggleSignup,
-    onToggleLogin,
-    user,
+    onToggleSignup
   },
 ) => {
+  const { id } = useParams();
   return (
     <div>
-      <Header
-        onToggleLogin={onToggleLogin}
-        onToggleSignup={onToggleSignup}
-      />
+      <Header />
       <Cover />
-      <Main user={user} onToggleSignup={onToggleSignup} />
+      <Main user={id} onToggleSignup={onToggleSignup} />
     </div>
   );
 };
