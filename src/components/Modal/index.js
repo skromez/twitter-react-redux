@@ -9,7 +9,7 @@ import avatar3 from '../../assets/images/tweet-modal/avatar3.jpg';
 import UserAvatar from '../../assets/images/profile/avatar.jpg';
 import Like from '../Like';
 
-const ModalContent = () => (
+const ModalContent = ( {user} ) => (
   <ModalBody>
     <div className="modal">
       <div className="modal__container">
@@ -18,7 +18,7 @@ const ModalContent = () => (
           className="modal__user"
           direction="column"
           name="Dmitry Novikov"
-          nick="skromez"
+          nick={user}
         />
       </div>
       <p className="modal__text">

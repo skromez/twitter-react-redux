@@ -9,15 +9,13 @@ class LoginContent extends Component {
     password: null,
   };
 
-  handleLoginChange = (e) => {
-    this.setState({
-      login: e.target.value
-    })
-  };
-
-  handlePasswordChange = (e) => {
-    this.setState({
-      password: e.target.value
+  handleInputChange = (e) => {
+    const { name, value } = e.target;
+    this.setState((prevState) => {
+      return {
+        ...prevState,
+        [name]: value
+      }
     })
   };
 
@@ -40,23 +38,21 @@ class LoginContent extends Component {
           </button>
           <h2 className="login__header">Already signed up?</h2>
           <form onSubmit={this.handleSubmit} className="login__form form-login">
-            {/*<input value={password}*/}
-            {/*       type="text"*/}
-            {/*       onChange={this.handlePasswordChange}*/}
-            {/*/>*/}
             <Input
               type="text"
+              name="login"
               className="login__input"
               placeholder="Login"
               value={login}
-              onChange={this.handleLoginChange}
+              onChange={this.handleInputChange}
             />
             <Input
               type="password"
+              name="password"
               className="login__input"
               placeholder="Password"
               value={password}
-              onChange={this.handlePasswordChange}
+              onChange={this.handleInputChange}
             />
             <label className="form-login__label">
               <input type="checkbox" className="form-login__checkbox" />

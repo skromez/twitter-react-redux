@@ -11,30 +11,17 @@ class SignUpContent extends Component {
     location: null,
   };
 
-  handleFirstNameChange = (e) => {
-    this.setState({
-      firstName: e.target.value
+  handleInputChange = (e) => {
+    const { name, value } = e.target;
+    this.setState((prevState) => {
+      return {
+        ...prevState,
+        [name]: value
+      }
     })
+
   };
 
-  handleLastNameChange = (e) => {
-    this.setState({
-      lastName: e.target.value
-    })
-  };
-
-  handleNicknameChange = (e) => {
-    this.setState({
-      nickname: e.target.value
-    })
-  };
-
-  handleLocationChange = (e) => {
-    this.setState({
-      location: e.target.value
-    })
-  };
-  
   handleSubmit = (e) => {
     e.preventDefault();
     console.log(this.state)
@@ -57,27 +44,31 @@ class SignUpContent extends Component {
           <form onSubmit={this.handleSubmit} className="signup__form form">
             <Input
               type="text"
+              name="firstName"
               className="signup__input"
               value={firstName}
-              onChange={this.handleFirstNameChange}
+              onChange={this.handleInputChange}
               placeholder="First Name" />
             <Input
               type="text"
+              name="lastName"
               className="signup__input"
               value={lastName}
-              onChange={this.handleLastNameChange}
+              onChange={this.handleInputChange}
               placeholder="Last Name" />
             <Input
               type="text"
+              name="nickname"
               className="signup__input"
               value={nickname}
-              onChange={this.handleNicknameChange}
+              onChange={this.handleInputChange}
               placeholder="Nickname" />
             <Input
               type="text"
+              name="location"
               className="signup__input"
               value={location}
-              onChange={this.handleLocationChange}
+              onChange={this.handleInputChange}
               placeholder="Location" />
             <Button
               className="signup__button"

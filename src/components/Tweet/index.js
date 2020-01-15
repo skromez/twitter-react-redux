@@ -7,7 +7,7 @@ import Like from '../Like';
 import UserAvatar from '../../assets/images/profile/avatar.jpg';
 
 
-const Tweet = () => (
+const Tweet = ({ user }) => (
   <TweetBody>
     <Avatar avatar={UserAvatar} className="tweet__avatar" size="normal" />
     <div>
@@ -16,7 +16,7 @@ const Tweet = () => (
           className="tweet__user"
           direction="row"
           name="Dmitry Novikov"
-          nick="skromez"
+          nick={user}
         />
         <Data className="tweet__data" data="1 Aug" />
       </div>
