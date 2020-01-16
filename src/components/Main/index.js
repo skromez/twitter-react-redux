@@ -5,19 +5,19 @@ import Tweets from '../Tweets';
 import Tweet from '../Tweet';
 import Join from '../Join';
 
-const Main = ({ onToggleSignup, user }) => (
+const Main = ({ handleModal }) => (
   <MainBody>
     <MainContainer size="normal" padding="normal">
-      <Profile user={user} />
+      <Profile />
       <div className="feed">
         <Tweets />
         <div>
-          <Tweet user={user} />
-          <Tweet user={user} />
-          <Tweet user={user} />
+          <Tweet />
+          <Tweet />
+          <Tweet />
         </div>
       </div>
-      <Join onToggleSignup={onToggleSignup} />
+      <Join handleModal={handleModal} />
     </MainContainer>
   </MainBody>
 );

@@ -1,22 +1,6 @@
 import styled from 'styled-components';
 
 const SignUpBody = styled.section`
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  background-color: rgba(0, 0, 0, 0.5);
-
-  .signup__container {
-    position: fixed;
-    padding: 20px;
-    max-width: 260px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); 
-    border-radius: 8px;
-    background: var(--white);
-  }
 
   .signup__heading {
     margin-bottom: 25px;

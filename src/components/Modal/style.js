@@ -1,85 +1,67 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
-const ModalBody = styled.section`
+const bigModal = css`
+  border-radius: 8px;
+  .modal__container {
+    width: 605px;
+    padding: 40px 40px 40px 30px;
+  }
+`;
+const smallModal = css`
+  .modal__container {
+    width: 260px;
+    padding: 15px 15px 20px;
+
+  }
+`;
+
+const ModalBody = styled.article`
   position: fixed;
-  background-color: rgba(0, 0, 0, 0.5);
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100%;
   height: 100%;
-  top: 0;
-  border-radius: 8px;
   
-  .modal {
-    position: fixed;
-    min-width: 605px;
-    padding: 30px 40px;
-    border-radius: 8px;
+  background-color: rgba(0, 0, 0, 0.4);
+  
+   ${(props) => {
+    switch (props.size) {
+      case 'smallModal':
+        return smallModal;
+      case 'bigModal':
+        return bigModal;
+      default:
+        return '';
+    }
+  }}
    
-    background-color: var(--white);
+   .modal__container {
+     background-color: #ffffff;
+     position: relative;
+     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
+     border-radius: 4px;
+   }
+  
+  .modal__button {
+    padding: 6.5px 30px;
     
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);    
-  }
-
-  .modal__container {
-    display: flex;
-    align-items: center;
-  }
-
-  .modal__avatar {
-    margin-right: 20px;
-  }
-
-  .modal__text {
-    margin-top: 30px;
-
-    font-size: 27px;
-    line-height: 32px;
-    letter-spacing: 0.027em;
-
-    color: var(--black);
-  }
-
-  .modal__data {
-    margin-top: 25px;
-
-    img {
-      display: none;
+    &--icon {
+      position: absolute;
+      border: none;
+      background: transparent;
+  
+      padding: 5px;
+      margin: 0;
+  
+      font-size: 28px;
+      color: var(--white);
+      
+      top: 0;
+      right: -45px;
     }
-  }
-
-  .modal__thumb {
-    &:not(:last-child) {
-      margin-right: 10px;
-    }
-  }
-
-  .likes {
-    margin-top: 25px;
-
-    display: flex;
-    align-items: center;
-
-    border-top: 1px solid #e6ecf0;
-    border-bottom: 1px solid #e6ecf0;
-    padding: 10px 0;
-  }
-
-  .likes__amount {
-    margin-right: 15px;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 16px;
-
-    color: var(--black);
-
-    span {
-      font-weight: 400;
-      color: var(--gray);
-    }
-  }
-  .data__icon {
-    display: none;
   }
 `;
 

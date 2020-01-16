@@ -1,36 +1,38 @@
-import React from 'react';
-import {
-  BrowserRouter as Router,
-  Redirect,
-  Route,
-  Switch,
-} from 'react-router-dom';
-import User from './pages/User';
-import Modal from './components/Modal';
-import Login from './components/Login';
+import React, { Component } from 'react';
+import { BrowserRouter as Router, } from 'react-router-dom';
+import TweetModal from './components/TweetModal';
 import SignUp from './components/SignUp';
-import NotFound from './components/NotFound';
-import MyProvider from './components/Context/MyProvider';
+import Login from './components/Login';
+import Layout from './components/Layout';
+import SignUpModal from './components/SignUpModal';
 
-const App = () => (
-  <MyProvider>
-    <Router>
-      <Switch>
-        <Route exact path={'/user/' && '/'}>
-          <Redirect to="/user/skromez" />
-        </Route>
-        <Route path="/user/:id">
-          <User />
-        </Route>
-        <Route path="/*/">
-          <NotFound />
-        </Route>
-      </Switch>
-      <Modal />
-      <SignUp />
-      <Login />
-    </Router>
-  </MyProvider>
-);
+class App extends Component {
+  state = {
+    login: false,
+    signUp: false,
+    tweet: false,
+  };
+  handleModal = (type) => {
+    this.setState((prevState) => ({
+      ...prevState,
+      [type]: !prevState[type]
+    }))
+  };
+
+  render() {
+    const { tweet, signUp, login } = this.state;
+    return (
+      <div className="app">
+        <Router>
+          <Layout handleModal={this.handleModal} />
+          {tweet && <TweetModal handleModal={this.handleModal} />}
+        </Router>
+        {signUp && <SignUpModal handleModal={this.handleModal} />}
+        {login && <Login handleModal={this.handleModal} />}
+      </div>
+    )
+  }
+}
+
 
 export default App;
