@@ -9,6 +9,11 @@ export const HeaderBody = styled.header`
 export const HeaderContainer = styled(Container)`
   display: flex;
   justify-content: space-between;
+  
+  .header__wrapper {
+    display: flex;
+    align-items: center;
+  }
 
   .header__button {
     &--signup {

@@ -4,7 +4,7 @@ import LogoBody from './style';
 
 const Logo = () => (
   <LogoBody className="logo">
-    <img src={logo} alt="" />
+    <img src={logo} alt="logo" className="logo__icon" />
     <p className="logo__text">Guccitter</p>
   </LogoBody>
 );

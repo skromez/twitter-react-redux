@@ -3,6 +3,11 @@ import styled from 'styled-components';
 export const LogoBody = styled.div`
   display: flex;
   align-items: center;
+  
+  .logo__icon {
+    max-width: 49px;
+    max-height: 49px;
+  }
 
   .logo__text {
     margin-left: 10px;

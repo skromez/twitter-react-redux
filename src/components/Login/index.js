@@ -27,9 +27,8 @@ class Login extends Component {
 
   render() {
     const { login, password } = this.state;
-    const { handleModal } = this.props
     return (
-      <Modal handleModal={handleModal} type="login" size="smallModal" className="modal">
+      <Modal type="LOGIN" size="smallModal" className="modal">
         <LoginBody>
           <h2 className="login__header">Already signed up?</h2>
           <form onSubmit={this.handleSubmit} className="login__form form-login">
